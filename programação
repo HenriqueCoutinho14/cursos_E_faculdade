@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href=".html">Início</a></li>
+            <li class="breadcrumb-item"><a href="link.2.html">cadastro</a></li>
+        </ul>
+
+        <fieldset class="border p-4 mt-3">
+            <legend class="w-auto">Selecione seu login</legend>
+            <h1>Formulário de Contato</h1>
+            <form id="login" method="post" action="user/login">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" name="nome" id="nome" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" required placeholder="contato.seunome@gmail.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Website:</label>
+                    <input type="text" class="form-control" name="website" id="website" />
+                </div>
+
+                <fieldset class="border p-2">
+                    <legend class="w-auto">Selecione o Curso</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" value="cc" id="cursoCC">
+                        <label class="form-check-label" for="cursoCC">Ciência da Computação</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" value="es" id="cursoES">
+                        <label class="form-check-label" for="cursoES">Engenharia de Software</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" value="ec" id="cursoEC">
+                        <label class="form-check-label" for="cursoEC">Engenharia da Computação</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="border p-2">
+                    <legend class="w-auto">Selecione a Linguagem</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ling" id="java" value="java">
+                        <label class="form-check-label" for="java">Java</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ling" id="c" value="c">
+                        <label class="form-check-label" for="c">C</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ling" id="cpp" value="cpp">
+                        <label class="form-check-label" for="cpp">C++</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ling" id="perl" value="perl">
+                        <label class="form-check-label" for="perl">Perl</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ling" id="python" value="python">
+                        <label class="form-check-label" for="python">Python</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ling" id="js" value="js">
+                        <label class="form-check-label" for="js">Javascript</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="border p-2">
+                    <legend class="w-auto">Dados Complementares</legend>
+                    <div class="form-group">
+                        <label for="color">Cor:</label>
+                        <input type="color" class="form-control" id="color">
+                    </div>
+                    <div class="form-group">
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="date" class="form-control" name="nascimento" id="nascimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Ano de entrada em seu curso do IComp:</label>
+                        <input type="number" class="form-control" name="ano" min="1980" max="2020" step="1" value="2020" id="ano">
+                    </div>
+                    <div class="form-group">
+                        <label for="nota">Para este site:</label>
+                        <input type="range" class="form-control-range" id="nota" name="nota" min="0" max="10">
+                    </div>
+                </fieldset>
+
+                <fieldset class="border p-2">
+                    <legend class="w-auto">Área de Atuação</legend>
+                    <div class="form-group">
+                        <label for="area">Selecione a área:</label>
+                        <select class="form-control" name="area" id="area">
+                            <option value="1">Banco de Dados</option>
+                            <option value="2">Educação a Distância</option>
+                            <option value="3">Engenharia de Software</option>
+                            <option value="4">Otimização</option>
+                            <option value="5">Programação para a Web</option>
+                            <option value="6">Recuperação de Informação</option>
+                            <option value="7">Redes de Computadores</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="border p-2">
+                    <legend class="w-auto">Submeta seu Currículo Vitae</legend>
+                    <input type="file" class="form-control-file" name="curriculo">
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea class="form-control" name="mensagem" rows="4" cols="30">Este é o valor</textarea>
+                </div>
+
+                <button type="reset" class="btn btn-secondary">Resetar Dados</button>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </fieldset>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
